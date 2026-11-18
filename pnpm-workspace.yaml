@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+  - tooling/*
+
+engineStrict: true
+
+# esbuild (Vite) and workerd (Cloudflare Vite plugin) ship native binaries.
+allowBuilds:
+  esbuild: true
+  workerd: true

@@ -1,0 +1,9 @@
+.output/
+.nitro/
+dist/
+.wrangler/
+.vercel/
+.tanstack/
+test-results/
+playwright-report/
+blob-report/
