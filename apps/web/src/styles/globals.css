@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/dm-sans";
+@import "@repo/ui/theme.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "DM Sans Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  width: 100%;
+  max-width: var(--container-6xl);
+
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  body {
+    @apply bg-background text-foreground min-h-svh font-sans antialiased;
+    background-image: radial-gradient(
+      ellipse 70% 42% at 50% -12%,
+      color-mix(in oklab, var(--color-olive-200) 55%, transparent),
+      transparent
+    );
+    background-attachment: fixed;
+  }
+
+  .dark body {
+    background-image: radial-gradient(
+      ellipse 70% 42% at 50% -12%,
+      color-mix(in oklab, var(--color-olive-800) 40%, transparent),
+      transparent
+    );
+  }
+}

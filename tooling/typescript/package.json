@@ -1,0 +1,10 @@
+{
+  "name": "@repo/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared strict TypeScript presets.",
+  "exports": {
+    "./base.json": "./base.json",
+    "./tanstack-start.json": "./tanstack-start.json"
+  }
+}
