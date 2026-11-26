@@ -12,16 +12,21 @@ const colorModes = [
   { value: "dark", label: "Dark", icon: MoonIcon },
 ] as const;
 
-const subscribe = () => () => {};
+const subscribe = (onStoreChange: () => void): (() => void) => {
+  onStoreChange();
+  return () => {
+    onStoreChange();
+  };
+};
 
-export function ColorModeToggle() {
+export const ColorModeToggle = () => {
   const { theme, setTheme } = useTheme();
   // The saved color mode is only known in the browser. Show no selection until
   // after hydration so the server and client render the same markup.
   const hydrated = useSyncExternalStore(
     subscribe,
     () => true,
-    () => false,
+    () => false
   );
 
   return (
@@ -29,9 +34,9 @@ export function ColorModeToggle() {
       aria-label="Color mode"
       spacing={0.5}
       className="bg-muted rounded-full p-0.5"
-      value={hydrated && theme ? [theme] : []}
+      value={hydrated && theme !== undefined && theme.length > 0 ? [theme] : []}
       onValueChange={([value]) => {
-        if (value) {
+        if (value !== undefined && value.length > 0) {
           setTheme(value);
         }
       }}
@@ -49,4 +54,4 @@ export function ColorModeToggle() {
       ))}
     </ToggleGroup>
   );
-}
+};

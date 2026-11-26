@@ -1,10 +1,8 @@
 # Decisions
 
-This folder records the product decisions you make while building your app, one file per
-decision. It starts empty.
+This folder records the product decisions you make while building your app, one file per decision. It starts empty.
 
-Name files `NNNN-short-kebab-title.md` (for example `0001-use-stripe-for-billing.md`) and number
-them in order. Don't rewrite an accepted decision. Add a new record that supersedes it instead.
+Name files `NNNN-short-kebab-title.md` (for example `0001-use-stripe-for-billing.md`) and number them in order. Don't rewrite an accepted decision. Add a new record that supersedes it instead.
 
 ## Template
 

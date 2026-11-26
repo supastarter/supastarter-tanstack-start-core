@@ -7,12 +7,14 @@ const prefix = "/api/rpc";
 
 const client = createApiClient({
   url: `http://localhost${prefix}`,
-  fetch: (request) => handleApiRequest(request, prefix),
+  fetch: async (request) => await handleApiRequest(request, prefix),
 });
 
-describe("handleApiRequest", () => {
+describe(handleApiRequest, () => {
   it("serves procedures to the typed client", async () => {
-    await expect(client.greeting({ name: "Ada" })).resolves.toEqual({ message: "Hello, Ada!" });
+    await expect(client.greeting({ name: "Ada" })).resolves.toStrictEqual({
+      message: "Hello, Ada!",
+    });
   });
 
   it("surfaces validation errors to the client", async () => {
@@ -25,15 +27,20 @@ describe("handleApiRequest", () => {
   it("answers GET health checks", async () => {
     const response = await handleApiRequest(
       new Request(`http://localhost${prefix}/health`),
-      prefix,
+      prefix
     );
 
     expect(response.status).toBe(200);
-    expect(await response.json()).toEqual({ json: { status: "ok" } });
+    await expect(response.json()).resolves.toStrictEqual({
+      json: { status: "ok" },
+    });
   });
 
   it("returns 404 outside the prefix", async () => {
-    const response = await handleApiRequest(new Request("http://localhost/other"), prefix);
+    const response = await handleApiRequest(
+      new Request("http://localhost/other"),
+      prefix
+    );
 
     expect(response.status).toBe(404);
   });

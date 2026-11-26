@@ -9,8 +9,6 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "lint": "oxlint --type-aware --deny-warnings",
-    "lint:fix": "oxlint --type-aware --fix",
     "test": "vitest run"
   },
   "dependencies": {
@@ -19,10 +17,7 @@
     "zod": "4.6.7"
   },
   "devDependencies": {
-    "@repo/oxc-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "oxlint": "1.93.0",
-    "oxlint-tsgolint": "7.0.2007",
     "typescript": "7.0.2",
     "vite": "8.3.8",
     "vitest": "5.1.0"

@@ -11,10 +11,6 @@
       "dependsOn": ["transit"],
       "outputs": []
     },
-    "lint": {
-      "dependsOn": ["transit", "type-check"],
-      "outputs": []
-    },
     "test": {
       "dependsOn": ["transit"],
       "outputs": []
@@ -27,7 +23,8 @@
       "dependsOn": ["build"],
       "cache": false
     },
-    "lint:fix": {
+    "//#check": {},
+    "//#fix": {
       "cache": false
     },
     "dev": {

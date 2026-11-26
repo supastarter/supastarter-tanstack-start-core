@@ -6,7 +6,7 @@ import { NotFound } from "@/components/not-found";
 
 import { routeTree } from "./routeTree.gen";
 
-export function getRouter() {
+export const getRouter = () => {
   const router = createRouter({
     routeTree,
     defaultNotFoundComponent: NotFound,
@@ -14,4 +14,4 @@ export function getRouter() {
   });
 
   return router;
-}
+};

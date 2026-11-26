@@ -8,6 +8,5 @@ export type ApiClient = RouterClient<Router>;
 
 export type ApiClientOptions = ConstructorParameters<typeof RPCLink>[0];
 
-export function createApiClient(options: ApiClientOptions): ApiClient {
-  return createORPCClient(new RPCLink(options));
-}
+export const createApiClient = (options: ApiClientOptions): ApiClient =>
+  createORPCClient(new RPCLink(options));
