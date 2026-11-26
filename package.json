@@ -14,15 +14,15 @@
     "fix": "ultracite fix"
   },
   "devDependencies": {
-    "oxfmt": "0.79.0",
-    "oxlint": "1.94.0",
-    "oxlint-tsgolint": "7.0.2007",
-    "turbo": "2.11.11",
+    "oxfmt": "0.80.0",
+    "oxlint": "1.95.0",
+    "oxlint-tsgolint": "7.0.2008",
+    "turbo": "2.11.13",
     "ultracite": "8.3.1"
   },
   "engines": {
     "node": ">=26",
-    "pnpm": "12.18.0"
+    "pnpm": "12.23.0"
   },
-  "packageManager": "pnpm@12.18.0"
+  "packageManager": "pnpm@12.23.0"
 }
