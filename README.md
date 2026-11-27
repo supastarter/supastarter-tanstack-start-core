@@ -32,19 +32,19 @@ The web app requires no environment variables. Its optional variables are listed
 
 ## Commands
 
-Run these at the repository root. Turbo runs each task in every package that defines it and caches the results. Add `--filter <package>` to limit a task to one package, for example `pnpm lint --filter web`.
+Run these at the repository root. Turbo runs each task in every package that defines it and caches the results. Lint and format run once at the root via Ultracite. Add `--filter <package>` to limit a Turbo task to one package, for example `pnpm --filter @repo/api test`.
 
 | Command | What it does |
 | --- | --- |
 | `pnpm dev` | Start the web app |
-| `pnpm check` | Format check, lint (type-aware), type-check and unit tests. Never writes files |
+| `pnpm check` | Ultracite check (format + type-aware lint), type-check and unit tests. Never writes files |
 | `pnpm verify` | `check`, the production build and the web end-to-end tests |
 | `pnpm build` | Build the web app for Node and Vercel (Nitro) |
 | `pnpm --filter web build:cloudflare` | Build the web app for Cloudflare Workers |
 | `pnpm test` | Unit tests (Vitest). Run one file with `pnpm --filter @repo/api test src/router.test.ts` |
 | `pnpm test:e2e` | Build the web app, then run the Playwright smoke tests against it |
-| `pnpm format` | Format all files (Oxfmt) |
-| `pnpm lint:fix` | Apply Oxlint auto-fixes |
+| `pnpm fix` | Apply Ultracite formatting and lint auto-fixes |
+| `pnpm format` | Alias for `pnpm fix` |
 
 The end-to-end tests need a browser once: `pnpm --filter web exec playwright install chromium`.
 
