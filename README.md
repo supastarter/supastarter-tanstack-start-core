@@ -7,7 +7,7 @@ A TypeScript monorepo for building a TanStack Start web app with a typed API.
 | `apps/web` | TanStack Start app. Serves the pages and the API at `/api/rpc` |
 | `packages/api` | API procedures (oRPC + Zod), the request handler and a typed client |
 | `packages/ui` | Tailwind CSS design tokens (colors, radii) |
-| `tooling/*` | Shared TypeScript and Oxlint configuration |
+| `tooling/*` | Shared TypeScript compiler presets (`@repo/typescript-config`) |
 
 The web app uses Tailwind CSS and shadcn/ui on Base UI, with the olive palette and Inter and DM Sans typefaces from supastarter for Next.js. It offers System, Light and Dark color modes, with System as the default.
 
