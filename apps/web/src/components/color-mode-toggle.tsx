@@ -1,6 +1,6 @@
 "use client";
 
-import { MonitorIcon, Moon01Icon, Sun03Icon } from "@hugeicons/core-free-icons";
+import { MonitorIcon, Moon02Icon, Sun03Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import type { IconSvgElement } from "@hugeicons/react";
 import { useTheme } from "next-themes";
@@ -11,7 +11,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 const colorModes = [
   { value: "system", label: "System", icon: MonitorIcon },
   { value: "light", label: "Light", icon: Sun03Icon },
-  { value: "dark", label: "Dark", icon: Moon01Icon },
+  { value: "dark", label: "Dark", icon: Moon02Icon },
 ] as const;
 
 const subscribe = (onStoreChange: () => void): (() => void) => {
