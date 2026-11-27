@@ -1,13 +1,6 @@
 {
   "version": 2,
   "skills": {
-    "shadcn": {
-      "source": "shadcn-ui/ui",
-      "commit": "0e5b2e621a9ee4cf6a604bbe6c5c0d5b70561eb4",
-      "sourceType": "github",
-      "skillPath": "skills/shadcn/SKILL.md",
-      "computedHash": "388962d16c7a4f13aaeee0d8f128e50a87df8553d42ef7988c39c0e1c74a40e8"
-    },
     "ultracite": {
       "source": "haydenbleasel/ultracite",
       "commit": "86f796440ebd06d7fc35df594f7fb53fee7245e8",
