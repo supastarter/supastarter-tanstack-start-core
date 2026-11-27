@@ -13,8 +13,7 @@ Guidance for agents working in this repository. [`docs/architecture.md`](docs/ar
 
 ## Rules
 
-- pnpm only. TypeScript strict, Ultracite (Oxlint + Oxfmt). No ESLint or Prettier. Agent
-  guidance for Ultracite lives in `.agents/skills/ultracite` (`haydenbleasel/ultracite`).
+- pnpm only. TypeScript strict, Ultracite (Oxlint + Oxfmt). No ESLint or Prettier. Agent guidance for Ultracite lives in `.agents/skills/ultracite` (`haydenbleasel/ultracite`).
 - No `any`, `@ts-ignore`, or lint or format disable comments.
 - Pin exact dependency versions. Keep each package's dependencies in its own `package.json`.
 - The web app is TanStack Start on Vite. Do not add Next.js APIs or dependencies.
