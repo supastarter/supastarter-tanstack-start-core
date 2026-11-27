@@ -108,14 +108,7 @@ Full steps: https://www.ultracite.ai/docs/migrate.md
 npx ultracite@latest upgrade
 ```
 
-`upgrade` installs the latest Ultracite (or the release `--version 7` names), reinstalls the linter at the versions that release supports, and runs `doctor`. Major releases also change how the configuration looks; `upgrade` lists the guides the project still needs, and with `--claude` or `--codex` it has that agent CLI apply them.
-
-To apply them yourself, follow each guide that applies, oldest first. Each one says how to tell whether the project needs it:
-
-- [references/upgrades/v5.md](references/upgrades/v5.md): Biome 1's config format to Biome 2's
-- [references/upgrades/v6.md](references/upgrades/v6.md): the single `ultracite` preset to `ultracite/core` plus framework presets
-- [references/upgrades/v7.md](references/upgrades/v7.md): `ultracite/<preset>` to `ultracite/biome/<preset>`, and the `lint` and `format` commands to `check` and `fix`
-- [references/upgrades/v8.md](references/upgrades/v8.md): removing `prettier/prettier` from ESLint and Stylelint configs, the Cypress and Storybook presets, ESLint configs that set type-checked rules, Oxlint's `typeAware` option, `init --yes`, and Zed's formatter on ESLint
+`upgrade` installs the latest Ultracite (or the release `--version 7` names), reinstalls the linter at the versions that release supports, and runs `doctor`. Major releases also change how the configuration looks; `upgrade` lists the guides the project still needs, and with `--claude` or `--codex` it has that agent CLI apply them. Version-specific migration steps: https://www.ultracite.ai/docs/upgrade
 
 ## Code Standards
 
