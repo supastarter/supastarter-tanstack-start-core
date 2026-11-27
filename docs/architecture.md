@@ -36,7 +36,7 @@ The web app imports the tokens in `apps/web/src/styles/globals.css` and defines 
 
 The color mode control (`apps/web/src/components/color-mode-toggle.tsx`) offers System, Light and Dark. System is the default and follows the device setting. Next-themes stores the choice in `localStorage` and sets the class on `<html>` before the page paints. Read or change the mode with `useTheme()` from `next-themes`.
 
-The shadcn CLI copies components based on Base UI into `apps/web/src/components/ui`. The config is `base-nova` with the olive palette and CSS variables, the same setup as the Next.js core, with `rsc` off because this app does not use React Server Components. Components that render a different element take a `render` prop, for example `<Button render={<a href="/" />} />`.
+The shadcn CLI copies components based on Base UI into `apps/web/src/components/ui`. The config is `base-luma` with the olive palette and CSS variables, the same setup as the Next.js core, with `rsc` off because this app does not use React Server Components. Components that render a different element take a `render` prop, for example `<Button render={<a href="/" />} />`.
 
 ## Routing
 
