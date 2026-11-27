@@ -38,7 +38,11 @@ export const Route = createRootRoute({
       { title: "supastarter" },
       { name: "description", content: "Built with supastarter." },
     ],
-    links: [{ rel: "stylesheet", href: globalsCss }],
+    links: [
+      { rel: "stylesheet", href: globalsCss },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "apple-touch-icon", href: "/favicon.svg", type: "image/svg+xml" },
+    ],
   }),
   shellComponent: RootDocument,
   component: RootComponent,
