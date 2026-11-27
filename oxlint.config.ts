@@ -7,10 +7,6 @@ import vitest from "ultracite/oxlint/vitest";
 export default defineConfig({
   env: core.env,
   extends: [core, tanstack, vitest, playwright],
-  ignorePatterns: [
-    ...core.ignorePatterns,
-    ".agents/skills/migrate-radix-to-base/**",
-    ".agents/skills/shadcn/**",
-  ],
+  ignorePatterns: [...core.ignorePatterns, ".agents/skills/shadcn/**"],
   options: { typeAware: true },
 });
