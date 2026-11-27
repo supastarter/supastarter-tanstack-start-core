@@ -1,6 +1,8 @@
 "use client";
 
-import { MonitorIcon, MoonIcon, SunIcon } from "lucide-react";
+import { MonitorIcon, Moon01Icon, Sun03Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import type { IconSvgElement } from "@hugeicons/react";
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
 
@@ -8,8 +10,8 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 const colorModes = [
   { value: "system", label: "System", icon: MonitorIcon },
-  { value: "light", label: "Light", icon: SunIcon },
-  { value: "dark", label: "Dark", icon: MoonIcon },
+  { value: "light", label: "Light", icon: Sun03Icon },
+  { value: "dark", label: "Dark", icon: Moon01Icon },
 ] as const;
 
 const subscribe = (onStoreChange: () => void): (() => void) => {
@@ -41,7 +43,7 @@ export const ColorModeToggle = () => {
         }
       }}
     >
-      {colorModes.map(({ value, label, icon: Icon }) => (
+      {colorModes.map(({ value, label, icon }) => (
         <ToggleGroupItem
           key={value}
           value={value}
@@ -49,7 +51,12 @@ export const ColorModeToggle = () => {
           title={label}
           className="text-muted-foreground hover:text-foreground aria-pressed:border-border aria-pressed:bg-background aria-pressed:text-foreground size-8 rounded-full border border-transparent p-0 hover:bg-transparent"
         >
-          <Icon className="size-3.5" aria-hidden="true" />
+          <HugeiconsIcon
+            icon={icon as IconSvgElement}
+            strokeWidth={2}
+            className="size-3.5"
+            aria-hidden="true"
+          />
         </ToggleGroupItem>
       ))}
     </ToggleGroup>
