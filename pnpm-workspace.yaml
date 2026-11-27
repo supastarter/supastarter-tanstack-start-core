@@ -4,6 +4,7 @@ packages:
   - tooling/*
 
 engineStrict: true
+minimumReleaseAge: 1440
 
 # esbuild (Vite) and workerd (Cloudflare Vite plugin) ship native binaries.
 allowBuilds:

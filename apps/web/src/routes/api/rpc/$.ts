@@ -1,9 +1,8 @@
 import { handleApiRequest } from "@repo/api/server";
 import { createFileRoute } from "@tanstack/react-router";
 
-function handler({ request }: { request: Request }) {
-  return handleApiRequest(request, "/api/rpc");
-}
+const handler = async ({ request }: { request: Request }) =>
+  await handleApiRequest(request, "/api/rpc");
 
 export const Route = createFileRoute("/api/rpc/$")({
   server: {

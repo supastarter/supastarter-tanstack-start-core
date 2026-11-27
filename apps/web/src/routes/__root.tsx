@@ -1,10 +1,34 @@
-import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
+import {
+  createRootRoute,
+  HeadContent,
+  Outlet,
+  Scripts,
+} from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import { NotFound } from "@/components/not-found";
 import { Providers } from "@/components/providers";
 
 import globalsCss from "@/styles/globals.css?url";
+
+const RootComponent = () => (
+  <Providers>
+    <Outlet />
+  </Providers>
+);
+
+const RootDocument = ({ children }: { readonly children: ReactNode }) => (
+  // next-themes sets the color mode class on <html> before React hydrates.
+  <html lang="en" suppressHydrationWarning>
+    <head>
+      <HeadContent />
+    </head>
+    <body>
+      {children}
+      <Scripts />
+    </body>
+  </html>
+);
 
 export const Route = createRootRoute({
   head: () => ({
@@ -20,26 +44,3 @@ export const Route = createRootRoute({
   component: RootComponent,
   notFoundComponent: NotFound,
 });
-
-function RootComponent() {
-  return (
-    <Providers>
-      <Outlet />
-    </Providers>
-  );
-}
-
-function RootDocument({ children }: { readonly children: ReactNode }) {
-  return (
-    // next-themes sets the color mode class on <html> before React hydrates.
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}

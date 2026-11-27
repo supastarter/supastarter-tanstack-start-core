@@ -3,7 +3,8 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "strictNullChecks": true
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [
@@ -14,6 +15,8 @@
     ".wrangler",
     ".vercel",
     "test-results",
-    "playwright-report"
+    "playwright-report",
+    "oxlint.config.ts",
+    "src/routeTree.gen.ts"
   ]
 }
