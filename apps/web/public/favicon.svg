@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="supastarter">
+  <title>supastarter</title>
+  <style>
+    .mark {
+      fill: oklch(0.27 0.03 128);
+    }
+    .accent {
+      fill: oklch(0.51 0.12 128);
+    }
+    @media (prefers-color-scheme: dark) {
+      .mark {
+        fill: oklch(0.97 0.01 128);
+      }
+      .accent {
+        fill: oklch(0.76 0.11 128);
+      }
+    }
+  </style>
+  <rect class="mark" x="12" y="7" width="8" height="4" rx="2" />
+  <rect class="accent" x="9" y="14" width="14" height="4" rx="2" />
+  <rect class="mark" x="6" y="21" width="20" height="4" rx="2" />
+</svg>

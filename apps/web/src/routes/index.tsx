@@ -1,5 +1,9 @@
+import {
+  ArrowRight01Icon,
+  ComputerTerminal01Icon,
+} from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRightIcon, TerminalIcon } from "lucide-react";
 
 import { ColorModeToggle } from "@/components/color-mode-toggle";
 import { Greeting } from "@/components/greeting";
@@ -43,7 +47,12 @@ const HomePage = () => (
         href="#api-preview"
         className={buttonVariants({ size: "lg", className: "mt-8" })}
       >
-        Try the API <ArrowRightIcon aria-hidden="true" />
+        Try the API{" "}
+        <HugeiconsIcon
+          icon={ArrowRight01Icon}
+          strokeWidth={2}
+          aria-hidden="true"
+        />
       </a>
 
       <section
@@ -53,7 +62,12 @@ const HomePage = () => (
       >
         <Card className="gap-0 pt-0 shadow-[0_24px_80px_-32px] shadow-olive-950/30 dark:shadow-black/70">
           <div className="bg-muted/35 text-muted-foreground flex items-center gap-2.5 border-b px-4 py-3 sm:px-6">
-            <TerminalIcon className="size-4" aria-hidden="true" />
+            <HugeiconsIcon
+              icon={ComputerTerminal01Icon}
+              strokeWidth={2}
+              className="size-4"
+              aria-hidden="true"
+            />
             <code className="text-xs">POST /api/rpc/greeting</code>
           </div>
           <CardHeader className="pt-6">
